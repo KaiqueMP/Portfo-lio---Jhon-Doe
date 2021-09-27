@@ -11,7 +11,7 @@
     />
     <link rel="stylesheet" href="/css/style.css" />
   </head>
-  <body>
+  <body >
     <main>
       <header>
         <!-- Criando o menu -->
@@ -24,18 +24,22 @@
             <div class="links">
               <ul>
                 <li>
-                  <a href="#">Inicio</a>
+                  <a href="#inicio">Inicio</a>
                 </li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Projetos</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#depoimentos">Clientes</a></li>
+                <li><a href="#contato">Contato</a></li>
               </ul>
+            </div>
+
+            <div class="hamburger-menu">
+              <div class="bar"></div>
             </div>
           </div>
         </nav>
 
         <!-- Criando o header -->
-        <div class="header-content">
+        <div class="header-content" id="inicio">
           <div class="container grid-2">
             <div class="column-1">
               <a class="before-title">Olá, meu nome é</a>
@@ -84,7 +88,7 @@
         </div>
       </section>
       <!-- Seção de projetos -->
-      <section class="projetos section">
+      <section class="projetos section" id="projetos">
         <div class="section-header">
           <a class="before-title">Projetos</a>
           <h2 class="title-2">Últimos trabalhos</h2>
@@ -144,7 +148,7 @@
         </div>
       </section>
       <!-- Seção de depoimentos -->
-      <section class="depoimentos section">
+      <section class="depoimentos section" id="depoimentos">
         <div class="container">
           <div class="section-header">
             <a class="before-title">Recomendações</a>
@@ -309,7 +313,7 @@
         </div>
       </section>
       <!-- Seção de contato -->
-      <section class="contact section">
+      <section class="contact section" id="contato">
         <div class="container grid-2">
           <div class="column-1">
             <img src="/assets/Contato.jpg" class="contact-img" alt="" />

@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --main-color: #3377FF;
+    --darker: #3568D4;
+    --lighter: #99BBFF;
+    --dark: #3A3A3C;
+    --gray-dark: #6B7588;
+    --gray-light: #C7C9D9;
+    --light: #F7F7FB;
+    --white: #FFFFFF;
+
+}
+
+/* Confingurações gerais */
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, buttons, input, textarea{
+    font-family: 'Inter', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+}
+
+.container{
+    position: relative;
+    z-index: 5;
+    max-width: 92rem /* Utilizar REM porque EM varia com a porcentagem */;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+.grid-2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /*Usar fr para não ter problemas com margins e paddings. Usar o repeat para deixar o código mais limpo e legível*/
+    align-items: center;
+    justify-content: center;
+}
+
+.text{
+    font-size: 1rem;
+    color: var(--gray-dark);
+    line-height: 1.75;
+}
+
+.before-title{
+    color: var(--main-color);
+    font-size: 1.25rem;
+}
+
+.column-1{
+    margin-right: 3rem;
+}
+
+.column-2{
+    margin-left: 3rem;
+}
+
+.image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section{
+    padding: 4rem 0;
+}
+
+.section-header{
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+/* Fim configurações gerais */
+
+/* Menu */
+
+header{
+    width: 100%;
+    overflow: hidden;
+}
+
+nav{
+    width: 100%;
+    position: relative;
+    z-index: 50;
+    background-color: var(--light);
+}
+
+nav > .container{ 
+    display: flex;
+    justify-content: space-between;
+    height: 6rem;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.links ul{
+    display: flex;
+}
+
+.links a{ 
+    display: inline-block;
+    padding: .9rem 1.2rem;
+    color: var(--dark);
+    font-size: 1.05rem;
+    line-height: 1;
+    transition: 0.3s;
+}
+
+.links a:hover{
+   color: var(--main-color); 
+}
+
+/* Fim menu */
+
+/* Primeira sessão - Header*/
+
+.header-content .container.grid-2{
+    min-height: calc(100vh - 6rem);
+    text-align: left;
+}
+
+.header-content .before-title{
+    color: var(--main-color) !important;
+}
+
+.header-title{
+    font-size: 5rem;
+    color: var(--dark);
+    margin-top: .5rem;
+}
+
+.header-content .text{
+    margin: 2rem 0 4rem 0;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1.125rem 5.375rem;
+    background-color: var(--main-color);
+    color: var(--white);
+    border-radius: .5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background-color: var(--darker);
+}
+
+/* Fim da primeira sessão - Header*/
+
+/* Segunda sessão - Clientes*/
+
+.client-logo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem 0;
+    background-color: var(--light);
+    border-radius: 8px;
+}
+
+.company-logo{
+    width: 80px;
+}
+
+/* Fim da segunda sessão - Clientes*/
+
+/* Terceira sessão - Trabalhos*/
+
+
+.title-2{
+    color: var(--dark);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: .5rem;
+}
+
+.title-3{
+    margin: .5rem 0 1.5rem 0;
+}
+
+.projetos .text{
+    margin-bottom: 2.5rem;
+}
+
+.column-1 .before-title{
+    color: var(--lighter);
+}
+
+.column-2 .before-title{
+    color: var(--lighter);
+}
+
+.projetos .btn{
+    background-color: var(--white);
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    transition: .3s;
+}
+
+.projetos .btn:hover{
+    background-color: #E3EDFF;
+}
+
+.projetos .column-1{
+    margin-right: 1.5rem;
+}
+
+.projetos .column-2{
+    margin-left: 1.5rem;
+}
+
+.config-projeto{
+    margin-top: 7rem;
+}
+/* Fim da terceira sessão - Trabalhos*/
+
+/* Quarta sessão - Depoimentos*/
+
+.depoimentos{
+    background-color: var(--light);
+}
+.icon{
+    width: 16px;
+    margin-bottom: 2rem;
+}
+
+.avatar{
+    width: 45px;
+    margin-right: 18px;
+}
+
+.card{
+    max-width: 360px;
+    min-width: 360px;
+    min-height: 348px;
+    background-color: var(--white);
+    border: 2px solid #EBEBF0;
+    border-radius: 10px;
+    padding: 3rem 2rem;
+}
+
+.card-wrap:first-child{
+    margin-right: 1rem;
+}
+
+.card-wrap:nth-child(2) {
+    margin: 0 1rem;
+}
+
+.card-wrap:nth-child(3) {
+    margin-left: 1rem;
+}
+
+.card-content .text{
+    margin-bottom: 3.5rem;
+}
+
+.card-user{
+    display: flex;
+}
+
+.user-name{
+    font-size: 1rem;
+    color: var(--dark);
+    margin-bottom: .5rem;
+}
+
+.user-company{
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--gray-dark);
+}
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Fim da terceira sessão - Depoimentos*/
+
+/* Quarta sessão - Contato */
+
+.contact .before-title{
+    color: var(--main-color);
+}
+
+.my-info{
+    font-size: 0.875rem;
+    color: #8F90A6;
+    line-height: 28px;
+    margin: 1.5rem 0;
+}
+
+input, textarea{
+    outline: 0;
+    background: var(--light);
+    width: 100%;
+    border: 0;
+    margin: 0 0 1rem;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+
+  textarea{
+    min-width: 100%;
+    max-width:max-content;
+    min-height: 150px; 
+    max-height: 150px;
+  }
+
+  /* Fim quarta sessão - Contato */
+
+  /* Quinta sessão - Footer */
+
+  footer{
+      background-color: var(--light);
+  }
+
+  footer .container{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 8rem;
+  }
+
+  footer .logo{
+      width: 120px;
+  }
+
+  footer .icon{
+      width: 16px;
+      margin: 0 .5rem;
+  }
+   /* Fim quinta sessão - Footer */
+
+   /* Responsivo */
+
+   @media (max-width: 1280px){
+    .section{
+        padding: 3rem 0;
+    }
+
+    .column-1{
+        margin-right: 1rem;
+    }
+
+    .column-2{
+        margin-left: 1rem;
+    }
+
+    .header-content .image-element{
+        max-width: 480px;
+        height: 600px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    nav .container{
+        height: 4.5rem;
+    }
+
+    .header-content .container.grid-2{
+        min-height: calc(100vh - 4.5rem);
+        padding-bottom: 1.5rem;
+    }
+
+    .card-wrap:first-child{
+        margin-right: .5rem;
+    }
+    
+    .card-wrap:nth-child(2) {
+        margin: 0 .5rem;
+    }
+    
+    .card-wrap:nth-child(3) {
+        margin-left: .5rem;
+    }
+
+    .card{
+        max-width: 320px;
+        min-width: 320px;
+        min-height: 348px;
+        background-color: var(--white);
+        border: 2px solid #EBEBF0;
+        border-radius: 10px;
+        padding: 3rem 2rem;
+    }
+   }
+
+   @media(max-width: 850px) {
+    .container{
+        max-width: 48rem;
+    }
+    .grid-2{
+       grid-template-columns: 1fr !important;
+    }
+
+    .column-1{
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .column-2{
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    .header-content{
+        margin-top: 4.5rem;
+    }
+
+    .header-content .image-element{
+        max-width: 100%;
+        margin: 0, auto;
+    }
+
+    header .column-1{
+        margin: 0 auto;
+    }
+    header .column-2{
+        margin-top: 2rem;
+    }
+
+    .projetos .column-1{
+        margin-right: 0;
+    }
+    
+    .projetos .column-2{
+        margin-left: 0;
+    }
+
+
+    .projeto-2 .grid-2 .column-1:nth-child(1){
+        order: 2;
+    }
+
+    .cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card{
+        max-width: 100%;
+        min-width: 50%;
+        min-height: 348px;
+        background-color: var(--white);
+        border: 2px solid #EBEBF0;
+        border-radius: 10px;
+        padding: 3rem 2rem;
+    }
+
+    .card-wrap:first-child{
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .card-wrap:nth-child(2) {
+        margin: 0 0 1rem 0;
+    }
+    
+    .card-wrap:nth-child(3) {
+        margin-left: 0;
+    }
+
+
+
+    footer .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 8rem;
+        padding: 6rem 0 6rem 0;
+    }
+
+    footer .container .logo{
+        margin-bottom: 1.5rem;
+    }
+
+    .copy{
+        margin-bottom: 1.5rem;
+    }
+
+    @media (max-width:600px){
+
+    .container{
+        max-width: 80rem;
+    }
+
+    .header-title{
+        font-size: 3rem;
+    }
+
+    .before-title{
+        font-size: 1rem;
+    }
+
+    .text{
+        font-size: 0.875rem;
+    }
+
+    .btn{
+        width: 100%;
+        text-align: center;
+    }
+
+    .client-logo{
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 2rem 0;
+        background-color: var(--light);
+        border-radius: 8px;
+    }
+
+    .copy{
+        text-align: center;
+    }
+
+
+
+   }
+
+   /* Fim responsivo */

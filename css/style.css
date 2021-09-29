@@ -105,7 +105,7 @@ header{
 
 nav{
     width: 100%;
-    position: relative;
+    position: fixed;
     z-index: 50;
     background-color: var(--light);
 }
@@ -205,6 +205,7 @@ nav.open .links{
 .header-content .container.grid-2{
     min-height: calc(100vh - 6rem);
     text-align: left;
+    padding-top: 10%;
 }
 
 .header-content .before-title{
@@ -603,6 +604,7 @@ input, textarea{
     .links a{
         color: var(--white);
     }
+   }
 
     
 
@@ -645,10 +647,21 @@ input, textarea{
     .copy{
         text-align: center;
     }
-
-    
-
-    
    }
-}
+
+    /* Responsivo 600px */
+
+    @media (max-width:500px){
+
+
+      .container{
+        max-width: 70rem;
+        padding: 0 2rem;
+      }
+      .btn{
+      padding: 1.125rem 3.375rem;
+      }
+      
+    }
+
    /* Fim responsivo */

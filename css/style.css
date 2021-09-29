@@ -661,6 +661,10 @@ input, textarea{
       .btn{
       padding: 1.125rem 3.375rem;
       }
+
+      .config-projeto{
+        margin-top: 3rem;
+      }
       
     }
 
